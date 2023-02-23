@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1st task print the natural number 
+        for (i = 0; i < 10; i++) {
+            document.write(i + '<br>');
+        }
+        // 2nd task; tthis is the adding number natural 1+2+3+4+5+6+7+8+9+10=55;
+        let sum = 10;
+        for (i = 0; i < 10; i++) {
+            sum += i;
+        }
+        document.write(sum);
+
+        // 3 rd task; this is the table printing
+        let n = +prompt('Enter the Number...');
+        for (i = 1; i < 11; i++) {
+            document.write(`${n} x ${i} = ${n*i}  <br>`)
+        }
+
+        //4th Task this is the printing of the fizz and buzz 
+        for (i = 1; i < 100; i++) {
+            let result = "";
+            if (i % 3 === 0) {
+                result = "fizz";
+            } else if (i % 5 === 0) {
+                result += "buzz";
+            }
+            console.log(result || i)
+        }
+        //5th taks adding the number of the sum digit
+        function getsum(n) {
+            let sum = 0;
+            while (n != 0) {
+                sum = sum + (n % 10);
+                n = parseInt(n / 10);
+            }
+            return sum;
+        }
+        let n = +prompt('Enter the Number')
+        document.write(getsum(n));
+        //6th task it is the printing the number prime or not
+        let inputValue = +prompt('ENter the Number');
+        let isPrime = inputValue == 1 ? false : true;
+        for (i = 2; i < inputValue; i++) {
+            inputValue % i == 0 ? isPrime *= false : isPrime *= true
+        }
+        alert(`${inputValue} is ${isPrime? 'prime':'not Prime'} Number `)
+            //7th Task it is the printing of the number in factorial 5!
+        function factorial(n) {
+            if (n == 0)
+                return 1;
+            return n * factorial(n - 1);
+        }
+        let n = +prompt('ENter the Number')
+        document.write(factorial(n))
+
+        //task 8th it is the printing of fabonacci_number
+        function fabonacci_number(n) {
+            if (n == 0) {
+                return 0;
+            } else if (n == 1) {
+                return 1;
+            } else {
+                return fabonacci_number(n - 2) + fabonacci_number(n - 1);
+            }
+
+
+        }
+        let n = 10;
+        for (i = 1; i < n; i++) {
+            document.write(fabonacci_number(i));
+        }
+    </script>
+</body>
+
+</html>

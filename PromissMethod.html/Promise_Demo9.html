@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add(a, b) {
+            let result;
+            result = a + b;
+            return result;
+        }
+        let addition = add(10, 20);
+        document.write(" Addition Of The Function=" + addition);
+
+        function sub(a, b) {
+
+            let result;
+            setTimeout(() => {
+                result = a - b;
+            }, 1000)
+
+            return result;
+        }
+        let substraction = sub(50, 60);
+        document.write("Substraction Of The Function=" + substraction + "<hr>");
+
+        var mul = function(a, b) {
+            let promiseObje = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve(a * b);
+                    reject('Error.......')
+                }, 2000)
+            })
+            return promiseObje;
+        }
+
+        promiseObje = mul(10, 20)
+        promiseObje.then(f1, f2)
+
+        function f1(response) {
+            document.write("Multilication Of The Function=" + response);
+        }
+
+        function f2(err) {
+            document.write(err);
+        }
+    </script>
+</body>
+
+</html>

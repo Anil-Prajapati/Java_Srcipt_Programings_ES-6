@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="myBtn1">Btn-1</button>
+    <button id="myBtn2">Btn-2</button>
+    <button id="myBtn3">Btn-3</button>
+
+    <script>
+        function f1() {
+            console.log(this); // this = dynamic(btn1,btn2,btn3,window)
+            this.style.backgroundColor = "red";
+        }
+        // f1();
+
+        document.getElementById("myBtn1").addEventListener("click", f1);
+        document.getElementById("myBtn2").addEventListener("click", f1);
+        document.getElementById("myBtn3").addEventListener("click", f1);
+    </script>
+</body>
+
+</html>

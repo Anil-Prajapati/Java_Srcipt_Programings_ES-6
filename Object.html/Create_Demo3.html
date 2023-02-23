@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            a: 10,
+            b: 20,
+            c: {
+                d: 30
+            }
+
+        }
+        let user1 = Object.create(user);
+        console.log(user, user1)
+
+        console.log(user1.a, user1.b, user1.c.d);
+        console.log(user.a, user.b, user.c.d);
+
+        user1.a = 15
+        user1.b = 30
+        user1.c.d = 60
+        console.log(user1.a, user1.b, user1.c.d);
+        console.log(user.a, user.b, user.c.d);
+    </script>
+</body>
+
+</html>

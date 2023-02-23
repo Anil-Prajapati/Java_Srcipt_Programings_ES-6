@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+                    this is the meaning of the arrow function regular function is dyamic and then arrow function is not dyanamic
+                    regular function where it is called and arrow function where it is delclead 
+                    */
+        var obj1 = {
+            x: 10,
+            counter: function() {
+                setTimeout(function() {
+                    alert(this.x + '  without bind');
+                    console.log(this + '  without bind');
+                }, 2000);
+            }
+        };
+        obj1.counter();
+
+        var obj2 = {
+            x: 10,
+            counter: function() {
+                setTimeout(function() {
+                    alert(this.x + '  with bind');
+                    console.log(this + ' with bind');
+                }.bind(this), 2000);
+            }
+
+        };
+        obj2.counter();
+
+        var obj2 = {
+            x: 10,
+            counter: function() {
+                setTimeout(() => {
+                    alert(this.x + '  arrow with bind');
+                    console.log(this + '  arrow with bind');
+                }, 2000);
+            }
+        };
+
+        obj2.counter();
+    </script>
+</body>
+
+</html>

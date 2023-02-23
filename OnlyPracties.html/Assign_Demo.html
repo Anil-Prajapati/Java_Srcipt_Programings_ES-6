@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Student = {
+            name: "ANil Kumar Prajapati",
+            age: 22,
+            role: 'Software Developer'
+        }
+
+        let Employee = {
+            id: 101,
+            sal: 250000,
+            bankName: 'Punjab NAtional bank'
+        }
+
+        //this is the two object from the student and Employe,my aim is the morge the data
+        Object.assign(Employee, Student)
+        console.log(Employee);
+        //output of the data in the java script code marge thell field
+
+        let fiels = {
+            love: 'i love you so much in rimmy',
+        }
+
+        Object.assign(fiels, Student);
+        console.log(fiels)
+    </script>
+</body>
+
+</html>

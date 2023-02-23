@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var emp = {
+                name: "ANil Kumar Prajapati",
+                age: 22,
+                addrress: {
+
+                    street: "Uttar Pradesh",
+                    city: 'Varansi',
+                    pinCode: 222001
+
+                },
+                cor: ['TATA', 'HIONDA', 'MARUTI']
+            }
+            //this is he entries key and values is printed
+        let a = Object.entries(emp)
+        console.log(a);
+
+
+        //fromEnttries convert arrays/map to object formate
+        let b = Object.fromEntries(a);
+        console.log(b)
+    </script>
+</body>
+
+</html>

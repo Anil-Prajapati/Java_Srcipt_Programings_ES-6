@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Employee(newAccoNo, newAccBal) {
+            this.newAccoNo = newAccoNo;
+            this.newAccoBal = newAccBal;
+        }
+
+        Employee.prototype.getInfo = function() {
+            document.writeln("<hr> this is the Account Number=" + this.newAccoNo);
+            document.writeln("<hr> this is the new Account Bal=" + this.newAccoBal);
+        }
+        var emp = new Employee(4539000100043869, 250000);
+        var emp1 = new Employee(4539000100043810, 450000);
+        emp.getInfo();
+        emp1.getInfo();
+
+        console.log(emp);
+        console.log(emp1);
+    </script>
+</body>
+
+</html

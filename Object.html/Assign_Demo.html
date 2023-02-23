@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: "ANil",
+            rollNo: 175407
+
+        }
+        console.log("this is the use of the assign method");
+        console.log(user);
+
+
+        let permission1 = {
+            canRead: true
+        }
+        let permission2 = {
+            canWirte: false
+        }
+        Object.assign(user, permission1, permission2);
+        console.log(user);
+        console.log();
+        document.writeln(user.name + "<hr>");
+        document.writeln(user.rollNo + "<hr>");
+        document.writeln(user.canRead + "<hr>")
+        document.writeln(user.canWirte + "<hr>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function f1() {
+            console.log('this is the function f1()...')
+        }
+
+        let a = setTimeout(f1, 3000)
+        let b = setTimeout(f1, 8000);
+
+        setTimeout(() => {
+            clearTimeout(b)
+            console.log('b is not printing ')
+        }, 5000)
+    </script>
+</body>
+
+</html>

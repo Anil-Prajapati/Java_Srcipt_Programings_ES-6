@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var addition = function(a, b) {
+            let result;
+            result = a + b;
+            return result;
+        }
+        let addValues = addition(10, 20);
+        document.write("Additon of the Number =" + addValues + "<br>");
+
+
+        var sub = function(a, b) {
+            let result;
+            result = a - b;
+            return result;
+        }
+
+        let substraction = sub(50, 20);
+        document.write("Substraction of the Number =" + substraction);
+
+        var mul = function(a, b) {
+            let promiseObject = new Promise(function(x, y) {
+                setTimeout(() => {
+                    x(a * b);
+                    y("Something Want Wromg....")
+                }, 1000)
+            })
+            return promiseObject;
+        }
+        promiseObject = mul(20, 50)
+
+        promiseObject.then((
+                res) => document.write("Multiplication Of The Number=" + res),
+            (err) => document.write(err))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let promiseObj = new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                resolve(["ANil", "Rahul", "kiran", "Reena", "Sujeet", "Suneel", "Sohan", "Suneeta", "Aneeta"])
+                reject("SOMETHING WANT WRONG...")
+            }, 1000)
+        })
+
+        //this is the async method use and work in batter way
+
+        //this is the method number tree if it any confotable then use proper way
+        async function f1() {
+            let cares = await promiseObj;
+            alert(cares)
+
+        }
+        f1();
+
+        //this is the method number two
+        promiseObj.then(
+            (res) => document.write(res),
+            (err) => document.write(err)
+        );
+
+
+        //this is the method number 1
+        promiseObj.then(f1, f2)
+
+        function f1(response) {
+            document.write(response);
+
+        }
+
+        function f2(err) {
+            document.write(err)
+        }
+    </script>
+</body>
+
+</html>

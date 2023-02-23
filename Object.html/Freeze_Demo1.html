@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Q-1 WHAT IS THE FREEZE IN JAVA SCRIPT
+        //Ans-Freeze method is not be changed any think means,update delete,add .etc we can not doing
+        var Student = {
+            name: "deepak",
+            age: 31
+        }
+        console.log(Student);
+
+        delete Student.age;
+        console.log(Student);
+
+        Student.collage = "Lanad"
+        console.log(Student)
+
+        //this is the normal code if you need to delete the datayou can delete it no problem
+
+
+        //this is the code is freeze method we can not delete it this are the constent data
+        var Employee = {
+            name: "Anil Kumar Prajapati",
+            age: 22,
+            postName: "Software Developer"
+        }
+
+        console.log(Employee);
+
+        //this is the freeze method
+        Object.freeze(Employee);
+
+        delete Employee.age;
+        console.log(Employee);
+
+        delete Employee.sal;
+        console.log(Employee);
+
+        Employee.add = "Jaunpur";
+        console.log(Employee);
+
+        //isfrozen this is the method is declead onlyis freee object or not,this is the freeze object then it will be return true otherwisereturn false;
+        console.log(Object.isFrozen(Student), Object.isFrozen(Employee));
+
+        //thise are the reference copy
+        let Employee1 = Employee;
+        console.log(Object.isFrozen(Employee), Object.isFrozen(Employee1))
+
+        //this is the shallow copy
+        let Employee3 = Object.assign({}, Employee)
+        console.log(Object.isFrozen(Employee3), Object.isFrozen(Employee))
+    </script>
+</body>
+
+</html>

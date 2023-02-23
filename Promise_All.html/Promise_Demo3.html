@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let url = [
+            "https://api.github.com/users/iliakan", // 2
+            "https://api.github.com/users/PulkitAgrawal08", //1
+            "https://api.github.com/users/sanjaysamantra1", //3
+        ];
+        let request = url.map((url) => fetch(url))
+
+        Promise.all(request).then(responseArr => {
+            let converJson = responseArr.map(res => res.json());
+            Promise.all(converJson).then(resArr => {
+                console.log(resArr)
+            })
+
+        })
+    </script>
+</body>
+
+</html>

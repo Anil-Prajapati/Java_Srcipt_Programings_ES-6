@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Employee(id, name, sal) {
+            this.id = id;
+            this.name = name;
+            this.sal = sal;
+            this.company = "Extio";
+            this.experiance = 'one Year';
+            this.fatherName = "Sohan Lal";
+            this.motherName = "suneeta";
+
+        }
+
+        Employee.prototype.colg = 'Mohabbat Nager';
+        let emp = new Employee(101, 'Anil', 25000, this.company + " " + this.experiance + " " + this.fatherName + " " + this.motherName + " " + this.colg);
+        console.log(emp);
+
+        let emp2 = new Employee(106, 'Rimmy', 25000);
+        console.log(emp2);
+
+        emp2.love = 'rimmyAnil '
+        console.log(emp2);
+
+
+        Employee.prototype.getInfo = function() {
+            console.log(this.id, this, name, this.sal, this.company, this.experiance, this.fatherName, this.motherName);
+        }
+    </script>
+</body>
+
+</html>

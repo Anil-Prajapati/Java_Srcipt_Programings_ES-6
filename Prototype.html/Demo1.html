@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(roll, name, add) {
+            this.roll = roll;
+            this.name = name;
+            this.add = add;
+        }
+        //this is the use of the prototype if you want to need add the extra column then it will be go on add using proptotype
+        Student.prototype.collageName = "BHU varansi"
+        let student = new Student(101, 'Anil Kumar Prajapati', 'Uttar Pradesh,Jaunpur');
+        let student1 = new Student(102, 'Dheeraj Gound', 'Kanpur');
+        let student2 = new Student(103, 'Vaibhav', 'Bihar');
+        console.log(student, student1, student2);
+
+        student1.collage = "VBSPU Jaunpur Uttar Pradesh"
+        console.log(student1.roll + " , " + student1.name + " , " + student1.collage);
+
+        //if you need to add the column name in santance they it it will be use this method only
+        student.cource = 'angular';
+        student1.cource = 'spring boot & microServices';
+        student2.cource = 'Advance java';
+        console.log(student, student1, student2);
+    </script>
+</body>
+
+</html>

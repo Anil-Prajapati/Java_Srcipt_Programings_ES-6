@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add(x) {
+            return function(y) {
+                return x + y;
+            }
+        }
+        //there are the two rule in curring declead values
+        //1-this are the declead one line only
+
+        console.log(add(50)(60));
+
+        //this is the second method to declead of the value
+        let addmark = add(50);
+        console.log(addmark(60));
+    </script>
+</body>
+
+</html>

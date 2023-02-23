@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            id;
+            name;
+            collageName;
+            add;
+
+            constructor(id, name, collageName, add) {
+                this.id = id;
+                this.name = name;
+                this.collageName = collageName;
+                this.add = add;
+            }
+        }
+        Student.prototype.colllage = "MHD Jaunpur";
+        let student = new Student(101, 'ANil', 'VbSpu Jaunpur', 'Jaunpur');
+        console.log(student);
+
+        student.branch = 'Infomation Technology';
+        let student1 = new Student(student.id + "" + student.name + "" + student.collageName + "" + student.branch + "" + student.add);
+        console.log(student)
+    </script>
+</body>
+
+</html>

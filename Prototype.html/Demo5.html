@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            constructor(id, name, roll) {
+                this.id = id;
+                this.name = name;
+                this.roll = roll;
+
+            }
+
+        }
+        Employee.prototype.company = "IBM";
+
+        //if the add any column in employee then this type of the use in method and other wise we can not posible to this method is colled 
+        Employee.prototype.getInfo = function() {
+            document.writeln(this.id + " " + this.name + "  " + this.roll + "  " + this.company + "<hr> ");
+        }
+        let emp = new Employee(101, 'ANil', 175407)
+        emp.getInfo();
+
+        let emp1 = new Employee(102, 'Rahul', 175406)
+        emp.getInfo();
+
+        console.log(emp, emp1);
+
+
+        document.writeln("this is the new method of the getData method <hr>");
+
+        Employee.prototype.collage = "Veer Bahadur Singh Purvanchal university` jaunpur";
+
+        Employee.prototype.getData = function() {
+            document.writeln(this.id + " " + this.name + " " + this.roll + " " + this.collage + " " + this.company + " <hr>")
+        }
+        let Emp11 = new Employee(103, 'mohimanyu bharti', 175401, );
+        Emp11.getData();
+        console.log(Emp11);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Employee = {
+                name: 'Rahul',
+                age: 21,
+                collage: 'TD collage'
+            }
+            //this is not seal method this is the normal method
+        console.log(Employee)
+
+        //seal means stracture  objecr con't be modified but properties can be changed
+        let Student = {
+            name: "ANil kuMar",
+            age: 22,
+            university: "VBSPU jaunpur"
+        }
+        Object.seal(Student)
+        console.log(Student);
+
+        //i try to changed the properties
+        Student.age = 25
+        console.log(Student)
+
+        //chnaged the name propeties in thes Student data
+        Student.name = "Santosh Prajapati";
+        console.log(Student)
+
+        Student.university = "BHU varansi";
+        Student.name = "Rahul Prajapati";
+        console.log(Student);
+
+        console.log(Object.isSealed(Student), Object.isSealed(Employee));
+
+        let Student1 = Student;
+        console.log(Object.isSealed(Student), Object.isSealed(Student1));
+
+        let Student3 = Object.assign({}, Student)
+        console.log(Object.isSealed(Student3), Object.isSealed(Student));
+    </script>
+</body>
+
+</html>

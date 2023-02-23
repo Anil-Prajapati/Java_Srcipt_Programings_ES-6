@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let promise1 = "https://api.github.com/users/PulkitAgrawal08";
+        let promise2 = "https://api.github.com/users/sanjaysamantra1";
+        let promise3 = "https://api.github.com/users/iliakan";
+
+        Promise.all([fetch(promise1), fetch(promise2), fetch(promise3)]).then(([res1, res2, res3]) => {
+            Promise.all([res1.json(), res2.json(), res3.json()]).then(([data1, data2, data3]) => {
+                console.log(data1, data2, data3)
+            })
+        })
+    </script>
+</body>
+
+</html>

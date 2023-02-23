@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addPromiss(a, b) {
+            let promissObje = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    resolve(a + b);
+                    reject('Error...');
+                }, 1000);
+
+            });
+            return promissObje;
+        }
+
+        let promissObject = addPromiss(10, 20);
+        document.writeln(promissObject);
+        promissObject.then((response) => document.write("Addition Of The Function=" + response), (err) => document.write("This Is The Error Of The Function=" + err))
+
+        //this are the two way calling the promise function in java script
+        //this is the called normal functuion
+        // promissObject.then(f1, f2)
+
+        // function f1(response) {
+        //     document.write("Addition Of The Function=" + response);
+        // }
+
+        // function f2(err) {
+        //     document.write("This Is The Error Of The Function=" + err)
+        // }
+    </script>
+</body>
+
+</html>

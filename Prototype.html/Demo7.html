@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Car(type, price) {
+            this.type = type;
+            this.price = price;
+        }
+        Car.run = function() {
+            console.log("car is running!!!");
+        }
+        var tata = new Car("Tata", 10000);
+        var maruti = new Car("maruti", 20000);
+
+        console.log(tata, maruti);
+        console.log(Car.run); //ok
+        console.log(tata.run); //undefined
+
+        //run() will not be there in every object
+        //how to make run() available to all objects
+    </script>
+</body>
+
+</html>

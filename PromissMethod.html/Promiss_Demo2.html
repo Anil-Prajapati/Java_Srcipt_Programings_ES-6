@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var add = function(a, b) {
+            let result;
+            result = a + b;
+            return result;
+        }
+
+        let result = add(10, 20);
+        document.write("Addition=" + result + "<br>");
+
+        var sub = function(a, b) {
+
+            setTimeout((result = a - b), 1000)
+            return result
+        }
+        let result1 = sub(20, 10)
+        document.write("Substraction=" + result1);
+    </script>
+</body>
+
+</html>

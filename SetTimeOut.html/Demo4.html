@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // parameterized function
+        function add(a, b) {
+            alert(a + b);
+        }
+        //this is the not write syntax
+        setTimeout(add(10, 20), 3000);
+
+        //that is the write syntax
+        setTimeout(add, 3000, 10, 20);
+    </script>
+</body>
+
+</html>

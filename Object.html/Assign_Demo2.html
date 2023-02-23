@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user1 = {
+                name: "ANil",
+                age: 22,
+                add: "UP"
+            }
+            //a user oibject is not created,this is the created to the reference object
+            //this is the colled reference object
+        let user2 = user1;
+        //this is the place use to data and modified to the age or any thing
+        user2.age = 45;
+        // user2.name = "Shubham"
+        // user2.add = "Bihar"
+        console.log(user1, user2);
+
+        //this is the colled by the shallow copy
+        let user3 = Object.assign({}, user1)
+        user3.name = "Suraj Mourya"
+        user3.add = "Jaunpur"
+        console.log(user3);
+    </script>
+</body>
+
+</html>

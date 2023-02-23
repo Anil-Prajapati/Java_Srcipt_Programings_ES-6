@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //preventExtensions() this is the use of the properties we can not add but deleted
+
+        let Student = {
+            name: "Rimmy",
+            age: 28,
+            collage: "VBSPU JAunpur",
+            add: "Uttar Pradesh"
+        }
+
+        console.log(Student)
+        console.log(Object.isExtensible(Student));
+
+        Object.preventExtensions(Student)
+        console.log(Object.isExtensible(Student));
+
+        //we can not add any properties in preventExtensions
+        Student.add = "Uttar Pradesh"
+        console.log(Student);
+
+
+        //we can posssible to delete this method but we can not add any other properties
+        delete Student.add;
+        console.log(Student)
+    </script>
+</body>
+
+</html>
